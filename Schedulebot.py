@@ -36,7 +36,7 @@ def get_keyboard(chat_id=None):
     on30 = db.get_notice_flag(chat_id, 30)
     return InlineKeyboardMarkup([
         [ InlineKeyboardButton("Today", callback_data="today"),InlineKeyboardButton("Find mm-dd", callback_data="find")],
-        #[InlineKeyboardButton(f"15min Notice: {'On' if on15 else 'Off'}", callback_data="toggle15"),InlineKeyboardButton(f"30min Notice: {'On' if on30 else 'Off'}", callback_data="toggle30")]
+        [InlineKeyboardButton(f"15min Notice: {'On' if on15 else 'Off'}", callback_data="toggle15"),InlineKeyboardButton(f"30min Notice: {'On' if on30 else 'Off'}", callback_data="toggle30")]
     ])
 
 # 啟動指令
@@ -220,3 +220,4 @@ if __name__=='__main__':
 
 
     app.run_polling()
+
